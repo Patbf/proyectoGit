@@ -9,7 +9,7 @@ def mostrar_menu():
     return opcion
 
 # Importa las funciones de operaciones desde operaciones.py
-from operaciones import sumar, restar, multiplicar
+from operaciones import sumar, restar, multiplicar, dividir
 
 if __name__ == "__main__":  # Este bloque se ejecuta solo si este archivo es ejecutado directamente
     # Llamamos a la función mostrar_menu para mostrar el menú al usuario y obtener la opción seleccionada
@@ -40,6 +40,20 @@ if __name__ == "__main__":  # Este bloque se ejecuta solo si este archivo es eje
         a = float(input("Introduce otro número: "))  
         # Llamamos a la función multiplicar y mostramos el resultado
         print(multiplicar(numero, a))  
+
+    # Si el usuario selecciona la opcion 4 (dividir)
+    elif opcion == 4:
+        # Pedimos al usuario otro número para realizar la division
+        # Convertimos la entrada del usuario en un número decimal (float)
+        a = float(input("Introduce otro número: "))  
+        # Llamamos a la función dividir y mostramos el resultado
+        print(dividir(numero, a))
+    
+    # Si el usuario selecciona laopcion 5 (Salir)
+    elif opcion == 5:
+        print("Gracias por usar el programa.")
+        exit()
+
 
     # Si el usuario introduce una opción no válida
     else:
