@@ -4,7 +4,6 @@ def mostrar_menu():
     print("3- Multiplicar")
     print("4- Dividir")
     print("5- Salir")
-    print("6- Factorial")
     opcion = int(input("Selecciona una opción: "))
     
     if opcion in [1, 2, 3, 4]:
