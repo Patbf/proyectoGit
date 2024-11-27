@@ -34,13 +34,11 @@ def multiplicar(a, b):
     """
     # Verificar si ambos parámetros son int o float
     if isinstance(a, (int, float)) and isinstance(b, (int, float)):
-        # Convertir b a entero en caso de ser float para iterar correctamente
-        b_entero = int(b)
-        # Usar un bucle para realizar la multiplicación en vez de la multiplicación directamente
-        return sum(a for _ in range(b_entero))
+        return a * b
     else:
         # Si no son válidos, devuelve un mensaje de error
         return "Error: ambos deben ser int o float"
+    
 
 def dividir(a, b):
     """
