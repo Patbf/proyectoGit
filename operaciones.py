@@ -67,3 +67,35 @@ def dividir(a, b):
         return cociente if a * b > 0 else -cociente
     # Si los parámetros no son del tipo int o float, se lanza una excepción
     raise ValueError("Ambos valores deben ser int o float")
+
+
+
+def factorial_recursivo(n):
+    # Verifica si 'n' no es un entero o si es negativo
+    if not isinstance(n, int) or n < 0:
+        # Si la validación falla, lanza un error explicativo
+        raise ValueError("El número debe ser un entero no negativo.")
+    
+    # Caso base: Si 'n' es 0 o 1, el factorial es 1
+    if n == 0 or n == 1:
+        return 1
+    
+    # Llamada recursiva: Si 'n' es mayor que 1, multiplica 'n' por el resultado de 'factorial_recursivo(n-1)'
+    return n * factorial_recursivo(n - 1)
+
+def factorial_iterativo(n):
+    # Verificar que el argumento sea un número entero no negativo
+    if not isinstance(n, int) or n < 0:
+        # Si no es un entero o es negativo, lanzar una excepción
+        raise ValueError("El número debe ser un entero no negativo.")
+    
+    # Inicializar la variable `resultado` en 1.
+    # Este valor representará el producto acumulado.
+    resultado = 1
+
+    # Iterar desde 1 hasta `n` (inclusive) para calcular el factorial.
+    for i in range(1, n + 1):
+        # Multiplicar el valor actual de `resultado` por el número `i`.
+        resultado *= i
+
+    # Devolver el valo
