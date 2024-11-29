@@ -83,6 +83,38 @@ def factorial_recursivo(n):
     # Llamada recursiva: Si 'n' es mayor que 1, multiplica 'n' por el resultado de 'factorial_recursivo(n-1)'
     return n * factorial_recursivo(n - 1)
 
+
+
+def fibonacci(n):
+    """
+    Calcula el n-ésimo número de la secuencia de Fibonacci de forma iterativa.
+    
+    :param n: Un número entero no negativo
+    :return: El n-ésimo número de Fibonacci
+    """
+    
+    # Verifica si n es un entero y si es mayor o igual a 0
+    if not isinstance(n, int) or n < 0:
+        raise ValueError("El número debe ser un entero no negativo.")
+    
+    # Inicializa las dos primeras variables de la secuencia Fibonacci
+    a, b = 0, 1
+    
+    # Si n es 0, el resultado es 0 (primer número de Fibonacci)
+    if n == 0:
+        return a
+    
+    # Si n es 1, el resultado es 1 (segundo número de Fibonacci)
+    if n == 1:
+        return b
+    
+    # Calcula el n-ésimo número de Fibonacci de forma iterativa
+    for _ in range(n - 1):  
+        a, b = b, a + b  
+    
+    # Devuelve el valor de b, que es el n-ésimo número de Fibonacci
+    return b  
+
 def factorial_iterativo(n):
     # Verificar que el argumento sea un número entero no negativo
     if not isinstance(n, int) or n < 0:
