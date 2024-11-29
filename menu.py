@@ -13,6 +13,10 @@ def mostrar_menu():
         return opcion, numero
     elif opcion == 5:
         return opcion, None
+    elif opcion == 8:
+        numero = int(input("Introduce un número: "))
+        return opcion, numero
+     
     else:
         print("Opción no válida.")
         return mostrar_menu()
