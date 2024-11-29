@@ -5,6 +5,7 @@ def mostrar_menu():
     print("4- Dividir")
     print("5- Salir")
     print("6- Factorial Recursivo")
+    print("8- Fibonacci")
     opcion = int(input("Selecciona una opción: "))
     
     if opcion in [1, 2, 3, 4]:
